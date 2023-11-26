@@ -1,0 +1,47 @@
+<h2>
+    <span class="badge rounded-pill text-bg-secondary"><%- locals.data.id[locals.index] %></span> <%-
+    locals.data.name[locals.index] %>
+</h2>
+<br />
+<% locals.data.tag.tagname[locals.index].forEach((element, index) => { %> <% if (index == 0) { %>
+<span class="badge text-bg-light"><h6><%- element %></h6></span>
+<% } else { %>
+<span class="badge text-bg-light" style="float: left; margin-right: 10px"><h6><%- element %></h6></span>
+<% } %> <% }) %>
+<br />
+<h5><%- locals.data.description[locals.index] %></h5>
+<br />
+<br />
+<h5>
+    <span class="badge text-bg-info">입력 조건</span><br />
+    <%- locals.data.input[locals.index] %>
+</h5>
+<br />
+<h5>
+    <span class="badge text-bg-info">출력 조건</span><br />
+    <%- locals.data.output[locals.index] %>
+</h5>
+<br />
+<br />
+<iframe
+    width="728"
+    height="90"
+    allowtransparency="true"
+    src="https://tab2.clickmon.co.kr/pop/wp_ad_728.php?PopAd=CM_M_1003067%7C%5E%7CCM_A_1137443%7C%5E%7CAdver_M_1046207&mon_rf=REFERRER_URL&mon_direct_url=URLENCODE_PASSBACK_INPUT"
+    frameborder="0"
+    scrolling="no"
+></iframe>
+<br />
+<br />
+<h2>예시 출력 / 입력</h2>
+<br />
+<% locals.data.tc_output[locals.index].forEach((element, index) => { %>
+<div>
+    <h4><span class="badge text-bg-primary">출력 예시 <%- index + 1 %></span></h4>
+    <h5><code><%- element %></code></h5>
+    <% if (locals.data.tc_input[locals.index].length != 0) { %>
+    <h4><span class="badge text-bg-danger">입력 예시 <%- index + 1 %></span></h4>
+    <h5><code><%- locals.data.tc_input[locals.index][index] %></code></h5>
+    <% } %>
+</div>
+<% }) %>
