@@ -15,7 +15,7 @@
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
     clip-path: inset(1px);
-    font-size: 10vw;
+    font-size: clamp(none, 10%, 100px);
 }
 
 .subtitle {
