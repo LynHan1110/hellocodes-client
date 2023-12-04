@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/css/main.css" />
 <div style="margin-top: 100px">
-    <header class="border border-5 border-black rounded">
+    <header>
         <div style="margin-left: 10px">
             <br />
             <h1 class="h1-title">Hello, Codes!</h1>
@@ -9,5 +9,112 @@
             <br />
         </div>
     </header>
-    <div style="margin-left: 10px"></div>
+    <div style="margin-left: 10px">
+        <br />
+        <ul
+            class="nav nav-pills nav-fill gap-2 p-1 small bg-primary rounded-5 shadow-sm"
+            id="pillNav2"
+            role="tablist"
+            style="
+                --bs-nav-link-color: var(--bs-white);
+                --bs-nav-pills-link-active-color: var(--bs-primary);
+                --bs-nav-pills-link-active-bg: var(--bs-white);
+                max-width: 700px;
+                margin: auto;
+            "
+        >
+            <li class="nav-item" role="presentation">
+                <button
+                    class="nav-link active rounded-5"
+                    id="home-tab2"
+                    data-bs-toggle="tab"
+                    type="button"
+                    role="tab"
+                    aria-selected="true"
+                >
+                    따끈따끈한 새로운 문제 🔥
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button
+                    class="nav-link rounded-5"
+                    id="profile-tab2"
+                    data-bs-toggle="tab"
+                    type="button"
+                    role="tab"
+                    aria-selected="false"
+                >
+                    두뇌 풀가동! 풀수있으면 풀어보세요! 🧠
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button
+                    class="nav-link rounded-5"
+                    id="contact-tab2"
+                    data-bs-toggle="tab"
+                    type="button"
+                    role="tab"
+                    aria-selected="false"
+                >
+                    운영자 추천 초보자 코스! 🚩
+                </button>
+            </li>
+        </ul>
+        <br />
+        <div id="ad" style="text-align: center"></div>
+        <div class="d-none d-lg-block"></div>
+    </div>
 </div>
+<script>
+    (function () {
+        var w = window;
+        if (w.ChannelIO) {
+            return w.console.error('ChannelIO script included twice.');
+        }
+        var ch = function () {
+            ch.c(arguments);
+        };
+        ch.q = [];
+        ch.c = function (args) {
+            ch.q.push(args);
+        };
+        w.ChannelIO = ch;
+        function l() {
+            if (w.ChannelIOInitialized) {
+                return;
+            }
+            w.ChannelIOInitialized = true;
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = 'https://cdn.channel.io/plugin/ch-plugin-web.js';
+            var x = document.getElementsByTagName('script')[0];
+            if (x.parentNode) {
+                x.parentNode.insertBefore(s, x);
+            }
+        }
+        if (document.readyState === 'complete') {
+            l();
+        } else {
+            w.addEventListener('DOMContentLoaded', l);
+            w.addEventListener('load', l);
+        }
+    })();
+
+    ChannelIO('boot', {
+        pluginKey: 'd01d87e2-f968-4960-b88c-7c289288947e',
+    });
+</script>
+<script type="text/javascript">
+    if (/android|webos|iphone|ipad|ipod|blackberry|windows phone/i.test(navigator.userAgent)) {
+        (function () {
+            document.getElementById('ad').innerHTML =
+                '<iframe width="320" height="50" allowtransparency="true" src="https://mtab.clickmon.co.kr/pop/wp_m_320.php?PopAd=CM_M_1003067%7C%5E%7CCM_A_1137443%7C%5E%7CAdver_M_1046207&mon_rf=REFERRER_URL&mon_direct_url=URLENCODE_PASSBACK_INPUT" frameborder="0" scrolling="no"></iframe>';
+        })();
+    } else {
+        (function () {
+            document.getElementById('ad').innerHTML =
+                '<iframe width="728" height="90" allowtransparency="true" src="https://tab2.clickmon.co.kr/pop/wp_ad_728.php?PopAd=CM_M_1003067%7C%5E%7CCM_A_1137443%7C%5E%7CAdver_M_1046207&mon_rf=REFERRER_URL&mon_direct_url=URLENCODE_PASSBACK_INPUT" frameborder="0" scrolling="no"></iframe>';
+        })();
+    }
+</script>

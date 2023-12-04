@@ -24,23 +24,27 @@
             }
         </style>
     </head>
-    <body>
+    <body style="zoom: 1">
         <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/">
                     <img src="/img/logo-big-bgremoved.png" alt="Hello Codes" width="45" height="45" />
                 </a>
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <div class="navbar-toggler">
+                    <button
+                        type="button"
+                        class="navbar-toggler"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <button class="btn btn-outline-primary">로그인</button>
+                </div>
+
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
@@ -84,6 +88,10 @@
                             </ul>
                         </li>
                     </ul>
+                    <form class="d-none d-lg-block">
+                        <button class="btn btn-outline-primary">로그인</button>
+                    </form>
+                    <form class="form-inline ml-auto d-lg-none"></form>
                 </div>
             </div>
         </nav>
