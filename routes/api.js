@@ -1,6 +1,8 @@
 const express = require('express');
+const { signInAnonymously } = require('firebase/auth');
 const router = express.Router();
 const data = require('../problem.json');
+const { auth } = require('../firebaseconfig');
 
 router.get('/api/problem/:id', (req, res) => {
     const index = data.id.indexOf(req.params.id);
@@ -20,4 +22,7 @@ router.get('/api/problem/:id', (req, res) => {
     });
 });
 
+router.post('/api/login', (req, res) => {
+    res.send('hello');
+});
 module.exports = router;
