@@ -42,7 +42,7 @@
                     >
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <button class="btn btn-outline-primary">로그인</button>
+                    <%- include('../include/_nav') %>
                 </div>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -84,13 +84,10 @@
                                 <li><a class="dropdown-item" href="#">실험실</a></li>
                                 <li><a class="dropdown-item" href="#">설정</a></li>
                                 <li><hr class="dropdown-divider" /></li>
-                                <li><a class="dropdown-item" href="https://hellocodes.kro.kr">구 버전으로 가기</a></li>
                             </ul>
                         </li>
                     </ul>
-                    <form class="d-none d-lg-block">
-                        <button class="btn btn-outline-primary">로그인</button>
-                    </form>
+                    <form class="d-none d-lg-block"><%- include('../include/_nav') %></form>
                     <form class="form-inline ml-auto d-lg-none"></form>
                 </div>
             </div>
