@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="/static/css/login.css" />
+<div style="margin-top: 100px; margin-left: 10px">
+    <div class="center_div">
+        <h2>로그인하기</h2>
+        <br />
+        <form action="/api/login" method="post">
+            <div class="input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping">아이디</span>
+                <input
+                    type="text"
+                    class="form-control idinput"
+                    name="id"
+                    aria-label="아이디"
+                    aria-describedby="addon-wrapping"
+                    autofocus
+                    required
+                />
+            </div>
+            <br />
+            <div class="input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping">비밀번호</span>
+                <input
+                    type="password"
+                    class="form-control idinput"
+                    name="passcode"
+                    aria-label="비밀번호"
+                    aria-describedby="addon-wrapping"
+                    autofocus
+                    required
+                />
+            </div>
+            <br />
+            <input type="submit" value="로그인" class="btn btn-secondary" />
+        </form>
+    </div>
+</div>
